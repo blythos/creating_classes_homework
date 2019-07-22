@@ -43,11 +43,18 @@ class TestLibrary < MiniTest::Test
 
     def test_get_book_info
 
-      # Double checking
+      # Double checking because I'm paranoid.
       assert_equal("harry_potter", @books.get_book_info("harry_potter")[:title])
       assert_equal("Britta", @books.get_book_info("a_bell_hooks_primer")[:rental_details][:student_name])
 
     end
+
+    def test_get_rental_details
+
+      assert_equal("Annie", @books.get_rental_info("the_conquest_of_bread")[:student_name])
+
+    end
+
 
 
 end
