@@ -14,5 +14,11 @@ class TestSportsTeam < MiniTest::Test
 
   end
 
+  def test_get_players
+
+    assert_equal(4, @team.get_players.length)
+
+  end
+
 
 end
