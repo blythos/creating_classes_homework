@@ -54,5 +54,25 @@ class TestSportsTeam < MiniTest::Test
 
   end
 
+  def test_team_won_wins()
+
+    @team.team_won("win")
+    assert_equal(3, @team.points)
+
+  end
+
+  def test_team_won_loses()
+
+    @team.team_won("lose")
+    assert_equal(0, @team.points)
+
+  end
+
+  def test_team_won()
+
+    @team.team_won("draw")
+    assert_equal(1, @team.points)
+
+  end
 
 end

@@ -1,12 +1,12 @@
 class SportsTeam
 
-  attr_accessor :name, :players, :coach
+  attr_accessor :name, :players, :coach, :points
 
   def initialize(name, players, coach)
     @name = name
     @players = players
     @coach = coach
-    @points = 0 
+    @points = 0
   end
 
   # Following code refactored out to use attr_accessor instead.
@@ -33,6 +33,11 @@ class SportsTeam
 
   def find_player(name)
     @players.include? name
+  end
+
+  def team_won(result)
+    @points += 3 if result == "win"
+    @points += 1 if result == "draw"
   end
 
 end
