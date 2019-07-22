@@ -14,4 +14,8 @@ def get_players()
   return @players
 end
 
+def get_coach()
+  return @coach
+end
+
 end

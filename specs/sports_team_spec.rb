@@ -20,5 +20,11 @@ class TestSportsTeam < MiniTest::Test
 
   end
 
+  def test_get_coach
+
+    assert_equal("Gandhi", @team.get_coach)
+
+  end
+
 
 end
