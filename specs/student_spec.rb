@@ -28,4 +28,12 @@ class TestStudent < MiniTest::Test
 
   end
 
+  def test_set_cohort()
+
+    @student.cohort("e19")
+
+    assert_equal("e19", @student.get_cohort)
+
+  end
+
 end
