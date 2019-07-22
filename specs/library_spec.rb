@@ -33,27 +33,41 @@ class TestLibrary < MiniTest::Test
         date: "01/12/19"
       }
       }])
-    end
+  end
 
-    def test_get_books
+  def test_get_books
 
-      assert_equal(4, @books.get_books.length)
+    assert_equal(4, @books.get_books.length)
 
-    end
+  end
 
-    def test_get_book_info
+  def test_get_book_info
 
-      # Double checking because I'm paranoid.
-      assert_equal("harry_potter", @books.get_book_info("harry_potter")[:title])
-      assert_equal("Britta", @books.get_book_info("a_bell_hooks_primer")[:rental_details][:student_name])
+    # Double checking because I'm paranoid.
+    assert_equal("harry_potter", @books.get_book_info("harry_potter")[:title])
+    assert_equal("Britta", @books.get_book_info("a_bell_hooks_primer")[:rental_details][:student_name])
 
-    end
+  end
 
-    def test_get_rental_details
+  def test_get_rental_details
 
-      assert_equal("Annie", @books.get_rental_info("the_conquest_of_bread")[:student_name])
+    assert_equal("Annie", @books.get_rental_info("the_conquest_of_bread")[:student_name])
 
-    end
+  end
+
+  def test_add_new_book
+
+    title = "capital_volume_one"
+
+    @books.add_new_book(title)
+    assert_equal(5, @books.get_books.length)
+    assert_equal("capital_volume_one", @books.get_book_info(title)[:title])
+
+  end
+
+
+
+
 
 
 
