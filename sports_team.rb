@@ -35,7 +35,7 @@ class SportsTeam
     @players.include? name
   end
 
-  def team_won(result)
+  def team_won(result) # This is based on football league rules, as no particular ruleset was specified!
     @points += 3 if result == "win"
     @points += 1 if result == "draw"
     @points if result == "lose"
