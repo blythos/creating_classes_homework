@@ -28,6 +28,10 @@ class SportsTeam
 
   def add_player(new_player)
     @players << new_player
+  end
+
+  def find_player(name)
+    @players.include? name
   end 
 
 end

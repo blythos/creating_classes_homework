@@ -38,6 +38,21 @@ class TestSportsTeam < MiniTest::Test
     @team.add_player("Tifa Lockheart")
     assert_equal(5, @team.players.length)
 
-  end 
+  end
+
+  def test_find_player__is_there
+
+    result = @team.find_player("Katy Perry")
+    assert_equal(true, result)
+
+  end
+
+  def test_find_player__is_not_there
+
+    result = @team.find_player("Someone Else")
+    assert_equal(false, result)
+
+  end
+
 
 end
