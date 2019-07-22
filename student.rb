@@ -11,6 +11,11 @@ class Student
 
   def get_cohort()
     return @cohort
-  end 
+  end
+
+  def student_name(new_name)
+    @student_name = new_name
+  end
+  
 
 end
