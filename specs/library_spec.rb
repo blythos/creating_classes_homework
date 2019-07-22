@@ -35,10 +35,19 @@ class TestLibrary < MiniTest::Test
       }])
     end
 
-def test_get_books
+    def test_get_books
 
-  assert_equal(4, @books.get_books.length)
+      assert_equal(4, @books.get_books.length)
 
-end
+    end
+
+    def test_get_book_info
+
+      # Double checking
+      assert_equal("harry_potter", @books.get_book_info("harry_potter")[:title])
+      assert_equal("Britta", @books.get_book_info("a_bell_hooks_primer")[:rental_details][:student_name])
+
+    end
+
 
 end
