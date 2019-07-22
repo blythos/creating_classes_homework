@@ -33,5 +33,11 @@ class TestSportsTeam < MiniTest::Test
 
   end
 
+  def test_add_player
+
+    @team.add_player("Tifa Lockheart")
+    assert_equal(5, @team.players.length)
+
+  end 
 
 end
