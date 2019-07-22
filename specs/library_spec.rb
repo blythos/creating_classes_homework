@@ -65,7 +65,12 @@ class TestLibrary < MiniTest::Test
 
   end
 
+  def test_update_book_details
 
+    @books.update_book_details("harry_potter", "Troy", "01/04/19")
+    assert_equal("01/04/19", @books.get_rental_info("harry_potter")[:date])
+
+  end
 
 
 
