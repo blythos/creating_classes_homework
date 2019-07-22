@@ -10,19 +10,19 @@ class TestSportsTeam < MiniTest::Test
 
   def test_get_team_name
 
-    assert_equal("Pleiades Saints", @team.get_team_name)
+    assert_equal("Pleiades Saints", @team.name)
 
   end
 
   def test_get_players
 
-    assert_equal(4, @team.get_players.length)
+    assert_equal(4, @team.players.length)
 
   end
 
   def test_get_coach
 
-    assert_equal("Gandhi", @team.get_coach)
+    assert_equal("Gandhi", @team.coach)
 
   end
 
