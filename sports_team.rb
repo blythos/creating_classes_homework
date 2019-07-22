@@ -38,6 +38,7 @@ class SportsTeam
   def team_won(result)
     @points += 3 if result == "win"
     @points += 1 if result == "draw"
+    @points if result == "lose"
   end
 
 end
