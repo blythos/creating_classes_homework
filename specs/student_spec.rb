@@ -14,4 +14,10 @@ class TestStudent < MiniTest::Test
 
   end
 
+  def test_get_cohort()
+
+    assert_equal("g14", @student.get_cohort)
+
+  end 
+
 end
